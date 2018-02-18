@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t docker-javastack .
+docker build -t javadevstack .

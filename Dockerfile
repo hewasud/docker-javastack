@@ -25,25 +25,27 @@ http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf862473
 	&& dnf localinstall -y jdk-8u162-linux-x64.rpm \
 	&& rm -f jdk-8u162-linux-x64.rpm \
 	&& dnf clean all \
-	&& echo 'JAVA_HOME=/usr/java/latest' >> /etc/environment \
-	&& echo "Setting up maven ..."
+	&& echo 'export JAVA_HOME=/usr/java/latest' > /etc/profile.d/jdksetup.sh \
+	&& chmod +x /etc/profile.d/jdksetup.sh \
+	&& echo "Setting up maven ..." \
 	&& mkdir -p /opt/maven \
 	&& cd /opt/maven \
 	&& curl -LO --silent http://apache.forsale.plus/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz \
 	&& tar zxf apache-maven-3.5.2-bin.tar.gz \
 	&& ln -sf apache-maven-3.5.2 latest \
 	&& rm -f apache-maven-3.5.2-bin.tar.gz \
-	&& echo 'M2_HOME=/opt/maven/latest' >> /etc/environment \
-	&& echo 'PATH=$PATH:$M2_HOME/bin' >> /etc/environment \
+	&& echo 'M2_HOME=/opt/maven/latest' > /etc/profile.d/mvnsetup.sh \
+	&& echo 'PATH=$PATH:$M2_HOME/bin' >> /etc/profile.d/mvnsetup.sh \
+	&& chmod +x /etc/profile.d/mvnsetup.sh \
 	&& mkdir -p /opt/tomcat \
-	&& echo "Setting up tomcat ..."
+	&& echo "Setting up tomcat ..." \
 	&& cd /opt/tomcat \
 	&& curl -LO --silent http://mirror.csclub.uwaterloo.ca/apache/tomcat/tomcat-8/v8.5.28/bin/apache-tomcat-8.5.28.tar.gz \
 	&& tar zxf apache-tomcat-8.5.28.tar.gz \
 	&& ln -sf apache-tomcat-8.5.28 latest \
 	&& rm -f apache-tomcat-8.5.28.tar.gz \
 	&& echo "org.apache.catalina.webresources.Cache.level=SEVERE" >> /opt/tomcat/latest/conf/logging.properties \
-	&& echo "Setting up intellij ..."
+	&& echo "Setting up intellij ..." \
 	&& mkdir -p /opt/intellij \
 	&& cd /opt/intellij \
 	&& curl -LO --silent https://download.jetbrains.com/idea/ideaIU-2017.3.4-no-jdk.tar.gz \
