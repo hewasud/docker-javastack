@@ -48,7 +48,8 @@ http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf862473
 	&& echo "Setting up intellij ..." \
 	&& mkdir -p /opt/intellij \
 	&& cd /opt/intellij \
-	&& curl -LO --silent https://download.jetbrains.com/idea/ideaIU-2017.3.4-no-jdk.tar.gz \
-	&& tar zxf ideaIU-2017.3.4-no-jdk.tar.gz \
-	&& ln -sf idea-IU-173.4548.28 latest \
+	&& curl -LO --silent https://download.jetbrains.com/idea/ideaIU-2017.3.5-no-jdk.tar.gz \
+	&& mkdir /opt/intellij/ideaUI-2017.3.5 \
+	&& tar zxf ideaIU-2017.3.5-no-jdk.tar.gz --strip-components=1 -C /opt/intellij/ideaUI-2017.3.5 \
+	&& ln -sf /opt/intellij/ideaUI-2017.3.5 latest \
 	&& ln -sf /opt/intellij/latest/bin/idea.sh /usr/bin/idea.sh 
