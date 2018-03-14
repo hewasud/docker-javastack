@@ -5,11 +5,9 @@ RUN dnf install -y openconnect vpnc-script git \
 		firefox curl dbus-x11 \
 		remmina-plugins-rdp \
 		mozilla-fira-mono-fonts mozilla-fira-sans-fonts mozilla-fira-fonts-common \
-		adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts \
-		adobe-source-han-serif-cn-fonts adobe-source-han-serif-tw-fonts \
 		dejavu-fonts-common dejavu-sans-fonts dejavu-sans-mono-fonts \
-		dejavu-serif-fonts eosrei-emojione-fonts fontawesome-fonts \
-		fontawesome-fonts-web gdouros-symbola-fonts gnu-free-fonts-common \
+		dejavu-serif-fonts fontawesome-fonts fontawesome-fonts-web \
+		gdouros-symbola-fonts gnu-free-fonts-common \
 		gnu-free-mono-fonts gnu-free-sans-fonts gnu-free-serif-fonts \
 		monofett-fonts overpass-mono-fonts \
 		oxygen-fonts-common oxygen-mono-fonts pcaro-hermit-fonts \
@@ -40,10 +38,10 @@ http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf862473
 	&& mkdir -p /opt/tomcat \
 	&& echo "Setting up tomcat ..." \
 	&& cd /opt/tomcat \
-	&& curl -LO --silent http://mirror.csclub.uwaterloo.ca/apache/tomcat/tomcat-8/v8.5.28/bin/apache-tomcat-8.5.28.tar.gz \
-	&& tar zxf apache-tomcat-8.5.28.tar.gz \
-	&& ln -sf apache-tomcat-8.5.28 latest \
-	&& rm -f apache-tomcat-8.5.28.tar.gz \
+	&& curl -LO --silent http://mirror.its.dal.ca/apache/tomcat/tomcat-8/v8.5.29/bin/apache-tomcat-8.5.29.tar.gz \
+	&& tar zxf apache-tomcat-8.5.29.tar.gz \
+	&& ln -sf apache-tomcat-8.5.29 latest \
+	&& rm -f apache-tomcat-8.5.29.tar.gz \
 	&& echo "org.apache.catalina.webresources.Cache.level=SEVERE" >> /opt/tomcat/latest/conf/logging.properties \
 	&& echo "Setting up intellij ..." \
 	&& mkdir -p /opt/intellij \
