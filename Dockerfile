@@ -28,7 +28,7 @@ http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf862473
 	&& echo "Setting up maven ..." \
 	&& mkdir -p /opt/maven \
 	&& cd /opt/maven \
-	&& curl -LO --silent http://apache.mirror.gtcomm.net/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz
+	&& curl -LO --silent http://apache.mirror.gtcomm.net/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz \
 	&& tar zxf apache-maven-3.5.3-bin.tar.gz \
 	&& ln -sf apache-maven-3.5.3 latest \
 	&& rm -f apache-maven-3.5.3-bin.tar.gz \
