@@ -26,17 +26,17 @@ http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf862473
 	&& mkdir -p /opt/tomcat \
 	&& echo "Setting up tomcat ..." \
 	&& cd /opt/tomcat \
-	&& curl -LO --silent http://mirror.its.dal.ca/apache/tomcat/tomcat-8/v8.5.29/bin/apache-tomcat-8.5.29.tar.gz \
-	&& tar zxf apache-tomcat-8.5.29.tar.gz \
-	&& ln -sf apache-tomcat-8.5.29 latest \
-	&& rm -f apache-tomcat-8.5.29.tar.gz \
+	&& curl -LO --silent http://mirror.its.dal.ca/apache/tomcat/tomcat-8/v8.5.30/bin/apache-tomcat-8.5.30.tar.gz \
+	&& tar zxf apache-tomcat-8.5.30.tar.gz \
+	&& ln -sf apache-tomcat-8.5.30 latest \
+	&& rm -f apache-tomcat-8.5.30.tar.gz \
 	&& echo "org.apache.catalina.webresources.Cache.level=SEVERE" >> /opt/tomcat/latest/conf/logging.properties \
 	&& echo "Setting up intellij ..." \
 	&& mkdir -p /opt/intellij \
 	&& cd /opt/intellij \
-	&& curl -LO --silent https://download.jetbrains.com/idea/ideaIU-2018.1-no-jdk.tar.gz \
+	&& curl -LO --silent https://download.jetbrains.com/idea/ideaIU-2018.1.1-no-jdk.tar.gz \
 	&& mkdir /opt/intellij/ideaUI-2018.1 \
-	&& tar zxf ideaIU-2018.1-no-jdk.tar.gz --strip-components=1 -C /opt/intellij/ideaUI-2018.1 \
+	&& tar zxf ideaIU-2018.1.1-no-jdk.tar.gz --strip-components=1 -C /opt/intellij/ideaUI-2018.1 \
 	&& ln -sf /opt/intellij/ideaUI-2018.1 latest \
 	&& ln -sf /opt/intellij/latest/bin/idea.sh /usr/bin/idea.sh \
-	&& rm -f ideaIU-2018.1-no-jdk.tar.gz
+	&& rm -f ideaIU-2018.1.1-no-jdk.tar.gz
