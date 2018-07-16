@@ -4,10 +4,10 @@ MAINTAINER Sudarsha Hewa <sudarsha@gamil.com>
 RUN echo "Setting up Oracle JDK8 ..." \
 	&& curl \
                 -LO --insecure --junk-session-cookies --location \
-		--remote-name \
+		--remote-name --silent \
 		--header "Cookie: oraclelicense=accept-securebackup-cookie" \
 http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.rpm \
-	&& dnf localinstall -y jdk-8u171-linux-x64.rpm \
+	&& dnf localinstall --allowerasing -y jdk-8u171-linux-x64.rpm \
 	&& dnf clean all \
 	&& rm -f jdk-8u171-linux-x64.rpm \
  	&& echo 'export JAVA_HOME=/usr/java/latest' > /etc/profile.d/jdksetup.sh \
