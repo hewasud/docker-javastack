@@ -34,9 +34,9 @@ http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61a
   	&& echo "Setting up intellij ..." \
   	&& mkdir -p /opt/intellij \
   	&& cd /opt/intellij \
-  	&& curl -LO --silent https://download.jetbrains.com/idea/ideaIU-2018.1.6-no-jdk.tar.gz \
-  	&& mkdir /opt/intellij/ideaUI-2018.1 \
-  	&& tar zxf ideaIU-2018.1.6-no-jdk.tar.gz --strip-components=1 -C /opt/intellij/ideaUI-2018.1 \
-  	&& ln -sf /opt/intellij/ideaUI-2018.1 latest \
+  	&& curl -LO --silent https://download.jetbrains.com/idea/ideaIU-2018.2.1-no-jdk.tar.gz \
+  	&& mkdir /opt/intellij/ideaUI-2018.2 \
+  	&& tar zxf ideaIU-2018.2.1-no-jdk.tar.gz --strip-components=1 -C /opt/intellij/ideaUI-2018.2 \
+  	&& ln -sf /opt/intellij/ideaUI-2018.2 latest \
   	&& ln -sf /opt/intellij/latest/bin/idea.sh /usr/bin/idea.sh \
-  	&& rm -f ideaIU-2018.1.6-no-jdk.tar.gz
+  	&& rm -f ideaIU-2018.2.1-no-jdk.tar.gz
