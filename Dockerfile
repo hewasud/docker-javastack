@@ -26,10 +26,10 @@ http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad
  	&& mkdir -p /opt/tomcat \
  	&& echo "Setting up tomcat ..." \
  	&& cd /opt/tomcat \
- 	&& curl -LO --silent http://apache.mirror.globo.tech/tomcat/tomcat-8/v8.5.32/bin/apache-tomcat-8.5.32.tar.gz \
- 	&& tar zxf apache-tomcat-8.5.32.tar.gz \
- 	&& ln -sf apache-tomcat-8.5.32 latest \
- 	&& rm -f apache-tomcat-8.5.32.tar.gz \
+ 	&& curl -LO --silent http://mirror.its.dal.ca/apache/tomcat/tomcat-8/v8.5.33/bin/apache-tomcat-8.5.33.tar.gz \
+ 	&& tar zxf apache-tomcat-8.5.33.tar.gz \
+ 	&& ln -sf apache-tomcat-8.5.33 latest \
+ 	&& rm -f apache-tomcat-8.5.33.tar.gz \
  	&& echo "org.apache.catalina.webresources.Cache.level=SEVERE" >> /opt/tomcat/latest/conf/logging.properties \
   	&& echo "Setting up intellij ..." \
   	&& mkdir -p /opt/intellij \
