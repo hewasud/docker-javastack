@@ -15,10 +15,10 @@ https://download.oracle.com/otn-pub/java/jdk/8u202-b08/1961070e4c9b4e26a04e7f5a0
  	&& echo "Setting up maven ..." \
  	&& mkdir -p /opt/maven \
  	&& cd /opt/maven \
- 	&& curl -LO --silent http://apache.mirror.rafal.ca/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz \
- 	&& tar zxf apache-maven-3.5.4-bin.tar.gz \
- 	&& ln -sf apache-maven-3.5.4 latest \
- 	&& rm -f apache-maven-3.5.4-bin.tar.gz \
+ 	&& curl -LO --silent http://apache.mirror.globo.tech/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz \
+ 	&& tar zxf apache-maven-3.6.0-bin.tar.gz \
+ 	&& ln -sf apache-maven-3.6.0-bin.tar.gz \
+ 	&& rm -f apache-maven-3.6.0-bin.tar.gz \
  	&& echo 'M2_HOME=/opt/maven/latest' > /etc/profile.d/mvnsetup.sh \
  	&& echo 'MAVEN_OPtS="-Xms1g -Xmx2g"' >> /etc/profile.d/mvnsetup.sh \
  	&& echo 'PATH=$PATH:$M2_HOME/bin' >> /etc/profile.d/mvnsetup.sh \
